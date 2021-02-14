@@ -1,13 +1,20 @@
 {
   "name": "discord-p5-canvas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Using p5.js in Node runtime to generate images with node-canvas and share it using discord.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "url": "https://github.com/dipamsen/DiscordxP5xCanvas"
+  },
+  "keywords": [
+    "canvas",
+    "p5xjs",
+    "discord"
+  ],
+  "author": "Fun Planet",
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
