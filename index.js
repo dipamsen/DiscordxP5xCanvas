@@ -12,19 +12,17 @@ client.on("message", async message => {
   if (tokens[0] !== prefix) return
   const command = tokens[1]
   const args = tokens.slice(2)
-  try {
-    switch (command) {
-      case "text": {
-        const buffer = await text(args[0])
-        message.channel.send(new Discord.MessageAttachment(buffer))
-        break
-      }
-      case "fractal": {
-        const buffer = await fractal()
-        message.channel.send(new Discord.MessageAttachment(buffer))
-      }
+  switch (command) {
+    case "text": {
+      const buffer = await text(args[0])
+      message.channel.send(new Discord.MessageAttachment(buffer))
+      break
     }
-  } catch { console.log("EROR") }
+    case "fractal": {
+      const buffer = await fractal()
+      message.channel.send(new Discord.MessageAttachment(buffer))
+    }
+  }
 })
 
 client.login(process.env.BOT_TOKEN)
